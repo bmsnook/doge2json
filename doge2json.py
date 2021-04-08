@@ -61,8 +61,10 @@ print("\n")
 print("INFO: current directory is: {}".format(my_cwd))
 print("INFO: examining current directory (listdir).")
 listing2 = os.listdir(my_cwd)
+doge_in_dir = 0
 for each_file in listing2:
   if each_file.endswith('.doge'):
+    doge_in_dir += 1
     print("Found: {}".format(each_file))
     each_decomp_file = each_file + ".json"
     if (os.path.isfile(each_decomp_file)):
@@ -87,7 +89,8 @@ for each_file in listing2:
         with open(each_decomp_file, 'w') as out_file:
 #          out_file.write(decompressed)
           out_file.write(json.dumps(decompressed_parsed, indent=4, sort_keys=False))
-
+if doge_in_dir == 0:
+  print("No doge files found in directory. Exiting.")
 
 
 
