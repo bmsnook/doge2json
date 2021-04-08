@@ -90,7 +90,7 @@ for each_file in listing2:
 #          out_file.write(decompressed)
           out_file.write(json.dumps(decompressed_parsed, indent=4, sort_keys=False))
 if doge_in_dir == 0:
-  print("No doge files fouund in directory. Exiting.")
+  print("No doge files found in directory. Exiting.")
 
 
 
