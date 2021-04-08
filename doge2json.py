@@ -37,6 +37,9 @@ def display_user_entered_lzstring_multiline():
 ## PRINT variables with strings
 ## https://matthew-brett.github.io/teaching/string_formatting.html
 
+## READ and JOIN multi-line input
+## https://stackoverflow.com/questions/30239092/how-to-get-multiline-input-from-user
+
 
 print("INFO: getting current directory.")
 my_cwd = os.getcwd()
